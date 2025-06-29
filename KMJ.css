@@ -2,6 +2,7 @@
   padding: 4rem 3rem;
   background-color: #f5f7fa;
   text-align: center;
+
 }
 
 .pricing-table {
@@ -17,12 +18,15 @@
   border-radius: 5px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;  /* 내부 박스를 중앙에 */
+  justify-content: center;
   align-items: center;
   height: 540px;
   width: 380px;
   transition: transform 0.3s;
   font-family: var(--heading-font);
+  height: auto;  
+  overflow: visible;  
+
 }
 
 .card-content {
@@ -48,10 +52,6 @@
 }
 
 @media (max-width: 992px) {
-  #pricing {
-  padding: 0;
-  margin: 0;
-  }
   .pricing-container {
     margin: 0;
     padding: 0;
@@ -99,7 +99,7 @@
 
 .price {
   font-size: 3rem;
-  color:#47b2e4; 
+  color: #47b2e4;
   padding-top: 2rem;
 }
 
@@ -109,11 +109,10 @@
 }
 
 .price .dollar {
-  font-size: 2rem; 
-  vertical-align: top; 
+  font-size: 2rem;
+  vertical-align: top;
   margin-right: 0.2rem;
-  color:#47b2e4; 
-
+  color: #47b2e4;
 }
 
 ul {
@@ -128,10 +127,8 @@ ul li {
   align-items: center;
   color: #444444;
   justify-content: flex-start;
-  margin: 1rem 0;             
+  margin: 1rem 0;
 }
-
-
 
 .check {
   color: green;
@@ -157,20 +154,19 @@ ul li {
   border: none;
   border-radius: 20px;
   background-color: white;
-  border: 1px solid #47b2e4; 
+  border: 1px solid #47b2e4;
   color: #47b2e4 !important;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button span{
+.button span {
   color: #47b2e4;
 }
 
 .card.middle .button {
   background-color: #47b2e4;
   color: white !important;
-
 }
 
 .button:hover {
@@ -183,20 +179,19 @@ ul li {
   border-top: 4px solid #47b2e4;
 }
 
-
-.testimonials-container .pricing-container{
+.testimonials-container .pricing-container {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
 }
 
 .section-title {
-    font-family: var(--heading-font); 
-    font-weight: 700;               
-    font-size: 2rem;               
-    color: #37517e;               
-    text-transform: uppercase; 
-    padding: 1rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #37517e;
+  text-transform: uppercase;
+  padding: 1rem;
 }
 
 .section-underline {
@@ -230,49 +225,24 @@ ul li {
 
 #testimonials {
   position: relative;
-  height: 500px;
+  height: 600px;
   background: white;
   text-align: center;
   padding-top: 4rem;
 }
 
-/* 타이틀은 기본 흐름대로 */
 .testimonials-header .pricing-header {
   margin-bottom: 2rem;
   z-index: 2;
   position: relative;
 }
 
-/* 기본적으로 자동 애니메이션 적용 */
-.testimonial {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fade 9s infinite;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  width: 100%;
-  pointer-events: none; /* 수동 선택 전까지 비활성 */
+.pricing-header {
+  padding-bottom: 3rem;
 }
 
-.t1 { animation-delay: 0s; }
-.t2 { animation-delay: 3s; }
-.t3 { animation-delay: 6s; }
-
-@keyframes fade {
-  0%, 100% { opacity: 0; }
-  10%, 30% { opacity: 1; }
-  40%, 90% { opacity: 0; }
-}
-
-/* 사용자가 선택한 testimonial을 우선 표시 */
-#t1:checked ~ section#testimonials .t1,
-#t2:checked ~ section#testimonials .t2,
-#t3:checked ~ section#testimonials .t3 {
-  animation: none;
-  opacity: 1;
-  pointer-events: auto;
+.testimonials-header {
+  padding-bottom: 3rem;
 }
 
 .testimonial-img {
@@ -287,22 +257,25 @@ ul li {
   color: #fbc02d;
   font-size: 1.2rem;
   margin: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .role {
-  font-style: italic;
   color: gray;
   margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--heading-font);
 }
 
 .quote {
-  width: 100%;              
-  max-width: 900px;     
-  margin: 0 auto;           
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   font-style: italic;
   color: #444444;
   line-height: 1;
-  text-align: center;   
+  text-align: center;
+  font-family: var(--heading-font);
 }
 
 .quote-icon {
@@ -342,27 +315,114 @@ ul li {
   height: 12px;
   border-radius: 50%;
   background-color: #ddd;
-  animation: dotCycle 9s infinite;
-}
-
-.dot.d1 {
-  animation-delay: 0s;
-}
-
-.dot.d2 {
-  animation-delay: 3s;
-}
-
-.dot.d3 {
-  animation-delay: 6s;
-}
-
-@keyframes dotCycle {
-  0%, 100%   { background-color: #ddd; }
-  10%, 30%   { background-color: #39b6e9; }
-  40%, 90%   { background-color: #ddd; }
 }
 
 .section-subtitle {
   color: #444444;
+}
+
+.testimonial h3 {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #37517e;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade 15s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  pointer-events: none;
+}
+
+#t1:checked ~ section#testimonials .t1,
+#t2:checked ~ section#testimonials .t2,
+#t3:checked ~ section#testimonials .t3,
+#t4:checked ~ section#testimonials .t4,
+#t5:checked ~ section#testimonials .t5ㄴ{
+  animation: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dot.d1 { animation: d1Cycle 15s infinite; }
+.dot.d2 { animation: d2Cycle 15s infinite; }
+.dot.d3 { animation: d3Cycle 15s infinite; }
+.dot.d4 { animation: d4Cycle 15s infinite; }
+.dot.d5 { animation: d5Cycle 15s infinite; }
+
+@keyframes d1Cycle {
+  0%, 19.99% { background-color: #39b6e9; }
+  20%, 100%  { background-color: #ddd; }
+}
+@keyframes d2Cycle {
+  0%, 19.99%, 40%, 100% { background-color: #ddd; }
+  20%, 39.99% { background-color: #39b6e9; }
+}
+@keyframes d3Cycle {
+  0%, 39.99%, 60%, 100% { background-color: #ddd; }
+  40%, 59.99% { background-color: #39b6e9; }
+}
+@keyframes d4Cycle {
+  0%, 59.99%, 80%, 100% { background-color: #ddd; }
+  60%, 79.99% { background-color: #39b6e9; }
+}
+@keyframes d5Cycle {
+  0%, 79.99% { background-color: #ddd; }
+  80%, 100% { background-color: #39b6e9; }
+}
+
+@keyframes fade1 {
+  0%, 19.99% { opacity: 1; visibility: visible; z-index: 1; }
+  20%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade2 {
+  0%, 19.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  20%, 39.99% { opacity: 1; visibility: visible; z-index: 1; }
+  40%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade3 {
+  0%, 39.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  40%, 59.99% { opacity: 1; visibility: visible; z-index: 1; }
+  60%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade4 {
+  0%, 59.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  60%, 79.99% { opacity: 1; visibility: visible; z-index: 1; }
+  80%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade5 {
+  0%, 79.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  80%, 100%  { opacity: 1; visibility: visible; z-index: 1; }
+}
+
+.t1 { animation: fade1 15s infinite; }
+.t2 { animation: fade2 15s infinite; }
+.t3 { animation: fade3 15s infinite; }
+.t4 { animation: fade4 15s infinite; }
+.t5 { animation: fade5 15s infinite; }
+
+#t1:checked ~ .testimonials-container .slider { animation: none; transform: translateX(0%); }
+#t2:checked ~ .testimonials-container .slider { animation: none; transform: translateX(-100%); }
+#t3:checked ~ .testimonials-container .slider { animation: none; transform: translateX(-200%); }
+#t4:checked ~ .testimonials-container .slider { animation: none; transform: translateX(-300%); }
+#t5:checked ~ .testimonials-container .slider { animation: none; transform: translateX(-400%); }
+
+.slider {
+  display: flex;
+  width: 500%;
+  animation: autoSlide 25s infinite;
+  transition: transform 1s ease-in-out;
+}
+
+.slider .testimonial {
+  width: 100vw;
+  flex-shrink: 0;
+  padding: 2rem;
 }
