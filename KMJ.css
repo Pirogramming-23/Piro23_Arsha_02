@@ -20,24 +20,39 @@
   justify-content: center;  /* 내부 박스를 중앙에 */
   align-items: center;
   height: 540px;
-  width: 440px;
+  width: 380px;
   transition: transform 0.3s;
-  padding: 1rem; /* 외곽 여백 */
+  font-family: var(--heading-font);
 }
 
 .card-content {
   width: 100%;
   max-width: 380px;
   text-align: left;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin: 3rem 0;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+@media (max-width: 1200px) {
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: 320px;
+    height: 604px;
+  }
+
+  .card-content {
+    padding: 3rem;    
+    font-size: 1.1rem; 
+  }
+
 }
 
 @media (max-width: 992px) {
@@ -47,32 +62,65 @@
   }
 
   .card {
-    width: 400px; /* 카드 넓게! */
-    max-width: 500px;
+    width: 720px;
+    height: 540px;
+  }
+
+  .card-content { 
+    padding: 3rem;    
+    font-size: 1.1rem; 
   }
 }
 
-/* 작은 화면 (모바일): 한 줄씩 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .pricing-table {
     flex-direction: column;
     align-items: center;
   }
 
   .card {
-    width: 90%;
-    max-width: 350px;
+    width: 540px;
+  }
+  .card-content { 
+    padding: 3rem;    
+    font-size: 1.1rem; 
+  }
+  .card h2 {
+    font-weight: 500;
+  }
+}
+
+/* 작은 화면 (모바일): 한 줄씩 */
+@media (max-width: 576px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 540px;
+    height: 600px;
+  }
+    .card-content { 
+    padding: 3rem;    
+    font-size: 1.1rem; 
+  }
+  .card h2 {
+    font-weight: 500;
   }
 }
 
 .card h2 {
   margin-bottom: 0.5rem;
-  font-weight: bold; 
+  font-weight: 600;
+  color: #37517e;
+  font-size: 1.5rem;
 }
 
 .price {
   font-size: 3rem;
-  color: #3498db;
+  color:#47b2e4; 
+  padding-top: 2rem;
 }
 
 .price span {
@@ -80,10 +128,17 @@
   color: gray;
 }
 
+.price .dollar {
+  font-size: 2rem; 
+  vertical-align: top; 
+  margin-right: 0.2rem;
+  color:#47b2e4; 
+
+}
+
 ul {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
   width: 100%;
 }
 
@@ -93,7 +148,10 @@ ul li {
   align-items: center;
   color: #444444;
   justify-content: flex-start;
+  margin: 1rem 0;             
 }
+
+
 
 .check {
   color: green;
@@ -107,14 +165,19 @@ ul li {
 
 .delete {
   text-decoration: line-through;
+  color: gray;
+}
+
+.check-sub {
+  color: gray;
 }
 
 .button {
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.9rem;
   border: none;
   border-radius: 20px;
   background-color: white;
-  border: 2px solid #47b2e4; 
+  border: 1px solid #47b2e4; 
   color: #47b2e4 !important;
   cursor: pointer;
   transition: 0.3s;
@@ -132,20 +195,14 @@ ul li {
 
 .button:hover {
   opacity: 0.8;
+  background-color: #47b2e4;
+  color: white !important;
 }
 
 .card.middle {
   border-top: 4px solid #47b2e4;
 }
 
-#testimonials {
-  position: relative;
-  height: 480px;
-  overflow: hidden;
-  background: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
 
 .testimonials-container .pricing-container{
   max-width: 800px;
@@ -159,6 +216,7 @@ ul li {
     font-size: 2rem;               
     color: #37517e;               
     text-transform: uppercase; 
+    padding: 1rem;
 }
 
 .section-underline {
@@ -167,6 +225,7 @@ ul li {
   background: #00b4e0;
   margin: 0.5rem auto 1.5rem;
   position: relative;
+  color: gray;
 }
 
 .section-underline::before,
@@ -326,8 +385,4 @@ ul li {
 
 .section-subtitle {
   color: #444444;
-}
-
-h2 {
-color: #37517e;
 }
