@@ -1,0 +1,340 @@
+#pricing {
+  padding: 4rem 1rem;
+  background-color: #f5f7fa;
+  text-align: center;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;  /* 내부 박스를 중앙에 */
+  align-items: center;
+  height: 540px;
+  width: 440px;
+  transition: transform 0.3s;
+  padding: 1rem; /* 외곽 여백 */
+}
+
+.card-content {
+  width: 100%;
+  max-width: 380px;
+  text-align: left;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 400px; /* 카드 넓게! */
+    max-width: 500px;
+  }
+}
+
+/* 작은 화면 (모바일): 한 줄씩 */
+@media (max-width: 600px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  font-weight: bold; 
+}
+
+.price {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.price span {
+  font-size: 1rem;
+  color: gray;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  color: #333;
+  justify-content: flex-start;
+}
+
+.check {
+  color: green;
+  margin-right: 0.5rem;
+}
+
+.x {
+  color: gray;
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card.middle .button {
+  background-color: #3498db;
+  color: white;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.card.middle {
+  border-top: 4px solid #3498db;
+}
+
+#testimonials {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  background: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-title {
+    font-family: var(--heading-font); 
+    font-weight: 900;               
+    font-size: 2rem;               
+    color: #2c3e50;               
+    text-transform: uppercase; 
+
+}
+
+.section-underline {
+  width: 100px;
+  height: 3px;
+  background: #00b4e0;
+  margin: 0.5rem auto 1.5rem;
+  position: relative;
+}
+
+.section-underline::before,
+.section-underline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: #ccc;
+}
+
+.section-underline::before {
+  left: -45px;
+  transform: translateY(-50%);
+}
+
+.section-underline::after {
+  right: -45px;
+  transform: translateY(-50%);
+}
+
+#testimonials {
+  position: relative;
+  height: 500px;
+  background: white;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+/* 타이틀은 기본 흐름대로 */
+.testimonials-header {
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* 기본적으로 자동 애니메이션 적용 */
+.testimonial {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade 9s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  pointer-events: none; /* 수동 선택 전까지 비활성 */
+}
+
+.t1 { animation-delay: 0s; }
+.t2 { animation-delay: 3s; }
+.t3 { animation-delay: 6s; }
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  10%, 30% { opacity: 1; }
+  40%, 90% { opacity: 0; }
+}
+
+/* 사용자가 선택한 testimonial을 우선 표시 */
+#t1:checked ~ section#testimonials .t1,
+#t2:checked ~ section#testimonials .t2,
+#t3:checked ~ section#testimonials .t3 {
+  animation: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #fbc02d;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.role {
+  font-style: italic;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+
+.quote {
+  width: 100%;              
+  max-width: 900px;     
+  margin: 0 auto;           
+  font-style: italic;
+  color: #333;
+  line-height: 1;
+  text-align: center;   
+}
+
+.quote-icon {
+  color: #87ceeb;
+  font-size: 1.5rem;
+}
+
+.testimonials-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+
+.header-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  z-index: 2;
+  background: white;
+  border: 4px solid white;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  animation: dotCycle 9s infinite;
+}
+
+.dot.d1 {
+  animation-delay: 0s;
+}
+
+.dot.d2 {
+  animation-delay: 3s;
+}
+
+.dot.d3 {
+  animation-delay: 6s;
+}
+
+@keyframes dotCycle {
+  0%, 100%   { background-color: #ddd; }
+  10%, 30%   { background-color: #39b6e9; }
+  40%, 90%   { background-color: #ddd; }
+}
+
+/* 폰트 설정 추가 (김민지) */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.section-subtitle {
+  font-family: var(--heading-font);
+}
+
+nav, .navbar, .nav-item, .menu {
+  font-family: var(--nav-font);
+}
+
+button, .button {
+  font-family: var(--nav-font);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 32px;
+    color: rgb(55, 81, 126);
+}
