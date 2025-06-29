@@ -2,13 +2,6 @@
   box-sizing: border-box;
 }
 
-/* 폰트 설정 추가 (김민지) */
-:root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Jost", sans-serif;
-  --nav-font: "Poppins", sans-serif;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -37,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  font-family: var(--default-font); /* 폰트 설정 추가 (김민지) */
 }
 
 ol, ul {

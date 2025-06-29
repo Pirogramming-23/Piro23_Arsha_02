@@ -103,8 +103,11 @@ ul li {
 
 .x {
   color: gray;
-  text-decoration: line-through;
   margin-right: 0.5rem;
+}
+
+.delete {
+  text-decoration: line-through;
 }
 
 .button {
