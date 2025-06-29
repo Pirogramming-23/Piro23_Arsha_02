@@ -36,7 +36,6 @@
   justify-content: center;
 }
 
-
 .card:hover {
   transform: translateY(-5px);
 }
@@ -92,7 +91,7 @@ ul li {
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
-  color: #333;
+  color: #444444;
   justify-content: flex-start;
 }
 
@@ -114,16 +113,21 @@ ul li {
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 20px;
-  background-color: transparent;
-  border: 2px solid #3498db;
-  color: #3498db;
+  background-color: white;
+  border: 2px solid #47b2e4; 
+  color: #47b2e4 !important;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.button span{
+  color: #47b2e4;
+}
+
 .card.middle .button {
-  background-color: #3498db;
-  color: white;
+  background-color: #47b2e4;
+  color: white !important;
+
 }
 
 .button:hover {
@@ -131,7 +135,7 @@ ul li {
 }
 
 .card.middle {
-  border-top: 4px solid #3498db;
+  border-top: 4px solid #47b2e4;
 }
 
 #testimonials {
@@ -151,16 +155,15 @@ ul li {
 
 .section-title {
     font-family: var(--heading-font); 
-    font-weight: 900;               
+    font-weight: 700;               
     font-size: 2rem;               
-    color: #2c3e50;               
+    color: #37517e;               
     text-transform: uppercase; 
-
 }
 
 .section-underline {
-  width: 100px;
-  height: 3px;
+  width: 50px;
+  height: 2.5px;
   background: #00b4e0;
   margin: 0.5rem auto 1.5rem;
   position: relative;
@@ -258,7 +261,7 @@ ul li {
   max-width: 900px;     
   margin: 0 auto;           
   font-style: italic;
-  color: #333;
+  color: #444444;
   line-height: 1;
   text-align: center;   
 }
@@ -321,23 +324,10 @@ ul li {
   40%, 90%   { background-color: #ddd; }
 }
 
-/* 폰트 설정 추가 (김민지) */
-h1, h2, h3, h4, h5, h6,
-.section-title,
 .section-subtitle {
-  font-family: var(--heading-font);
+  color: #444444;
 }
 
-nav, .navbar, .nav-item, .menu {
-  font-family: var(--nav-font);
-}
-
-button, .button {
-  font-family: var(--nav-font);
-}
-
-.section-title {
-    font-weight: 700;
-    font-size: 32px;
-    color: rgb(55, 81, 126);
+h2 {
+color: #37517e;
 }
