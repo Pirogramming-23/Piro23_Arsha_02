@@ -240,21 +240,51 @@ header {
     height: auto;
 }
 
-.faq-toggle {
+.faq-toggle-1 {
     display: none;
 }
-
 /* 초기 상태: 숨겨진 답변 */
-.faq-answer {
+.faq-answer1 {
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.3s ease, max-height 0.3s ease;
     max-height: 0;
     overflow: hidden;
 }
-
 /* 체크 시 보이게 */
-.faq-toggle:checked ~ .faq-answer {
+.faq-toggle-1:checked ~ .faq-answer1 {
+    transform: scaleY(1);
+    max-height: 500px;
+}
+.faq-toggle-2 {
+    display: none;
+}
+/* 초기 상태: 숨겨진 답변 */
+.faq-answer2 {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+/* 체크 시 보이게 */
+.faq-toggle-2:checked ~ .faq-answer2 {
+    transform: scaleY(1);
+    max-height: 500px;
+}
+.faq-toggle-3 {
+    display: none;
+}
+/* 초기 상태: 숨겨진 답변 */
+.faq-answer3 {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+/* 체크 시 보이게 */
+.faq-toggle-3:checked ~ .faq-answer3 {
     transform: scaleY(1);
     max-height: 500px;
 }
