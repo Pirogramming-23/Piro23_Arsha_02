@@ -186,13 +186,25 @@ header {
     transform: translateX(4px)
 }
 
-#why-us {
+.why-us-container {
     height: 527.6px;
     background-color: #f5f6f8;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
+    flex-flow: row;
+}
+.why-us-left {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.why-us-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
 }
 
 #skills {
