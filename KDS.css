@@ -186,7 +186,7 @@ header {
     transform: translateX(4px)
 }
 
-.why-us {
+#why-us {
     height: auto;
     background-color: #f5f6f8;
     display: flex;
@@ -212,8 +212,8 @@ header {
     font-weight: 400;
 }
 .why-us-left > p {
-    color: srgb(0.267, 0.267, 0.267, 0.267 / 0.7);
-    opacity: 0.3;
+    color: rgba(0.267, 0.267, 0.267, 0.4);
+    opacity: 0.7;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 16px;
@@ -256,6 +256,16 @@ header {
     transform: scaleY(1);
     max-height: 500px;
 }
+.faq-toggle-1:checked + .faq-label-1 .why-us-faq div {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    color: #47b2e4;
+}
+
+.faq-toggle-1:checked + .faq-label-1 .why-us-faq h3 {
+    color: #47b2e4;
+}
+
 .faq-toggle-2 {
     display: none;
 }
@@ -272,6 +282,16 @@ header {
     transform: scaleY(1);
     max-height: 500px;
 }
+.faq-toggle-2:checked + .faq-label-2 .why-us-faq div {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    color: #47b2e4;
+}
+
+.faq-toggle-2:checked + .faq-label-2 .why-us-faq h3 {
+    color: #47b2e4;
+}
+
 .faq-toggle-3 {
     display: none;
 }
@@ -287,6 +307,14 @@ header {
 .faq-toggle-3:checked ~ .faq-answer3 {
     transform: scaleY(1);
     max-height: 500px;
+}
+.faq-toggle-3:checked + .faq-label-3 .why-us-faq div {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    color: #47b2e4;
+}
+.faq-toggle-3:checked + .faq-label-3 .why-us-faq h3 {
+    color: #47b2e4;
 }
 
 
@@ -313,8 +341,8 @@ header {
     position: relative;
     top: -3px;
     color: lightgray;
-    font-size: 16px;
-    transform: scaleY(2);
+    font-size: 25px;
+    transform: scaleX(1.5);
     cursor: pointer;
     transition: 0.3s;
 }
@@ -331,27 +359,208 @@ header {
 }
 .why-us-right img {
     object-fit: contain;
+    min-width: 380px;
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+    transform: scale(1); /* 기본 상태 */
 }
 
+#why-us:has(.faq-toggle-1:checked):has(.faq-toggle-2:checked) .why-us-right img {
+    transform: scale(1.2);
+}
+#why-us:has(.faq-toggle-2:checked):has(.faq-toggle-3:checked) .why-us-right img {
+    transform: scale(1.2);
+}
+#why-us:has(.faq-toggle-1:checked):has(.faq-toggle-3:checked) .why-us-right img {
+    transform: scale(1.2);
+}
+#why-us:has(.faq-toggle-1:checked):has(.faq-toggle-2:checked):has(.faq-toggle-3:checked) .why-us-right img {
+    transform: scale(1.5);
+}
 
 #skills {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 508.8px;
+    height: auto;
     padding: 60px 0;
     background-color: white;
 }
 
-#services {
-    height: 557.4px;
+.skills-wrapper {
     display: flex;
+    justify-content: center;
+    padding: 0 120px;
+}
+
+.skills-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+}
+.skills-img-container > img {
+    width: 546px;
+}
+
+.skills-right {
+    padding: 0 12px;
+}
+.skills-right > h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+}
+
+.skills-right > p {
+    color: rgba(0.267, 0.267, 0.267, 0.7);
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    font-style: italic;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.progress-container {
+    height: 60px;
+    display: block;
+}
+
+.skill-name-container {
+    color: #444444;
+    margin: 0 0 6px 0;
+    display: block;
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+}
+
+.progress-value {
+    float: right;
+    font-style: normal;
+}
+
+.progress-bar-wrap {
+    background-color: rgba(55, 81, 126, 0.1);
+    height: 10px;
+    overflow: hidden;
+    transform-origin: left;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #37517e;
+}
+#progress-bar1 {width: 100%;}
+#progress-bar2 {width: 90%;}
+#progress-bar3 {width: 75%;}
+#progress-bar4 {width: 55%;}
+
+#services {
+    display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     background-color: #f5f6f8;
     padding: 60px 0;
+}
+
+.services-top {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.services-top-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.services-top-container > h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+.services-top-container > h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: rgba(68, 68, 68, 0.4);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+.services-top-container > h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.services-top-container p {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+.services-card {
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    box-shadow: 0 5px 90px 0px rgba(0, 0, 0, 0.1);
+    padding: 50px 30px;
+    transition: all ease-in-out 0.4s;
+    width: 261px;
+    height: 275px;
+}
+
+.services-card-img {
+    transform: scale(0.8);
+}
+
+.services-card a {
+    color: #37517e;
+    transition: ease-in-out 0.3s;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Jost", sans-serif;
+}
+
+.services-card p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.services-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 #work-process {
@@ -478,6 +687,10 @@ footer {
     .about-us-bottom-left, .about-us-bottom-right {
         width: 480px;
     }
+
+    .skills-img-container > img {
+        width: 456px;
+    }
 }
 @media (max-width: 992px) {
     #about-us {
@@ -493,12 +706,28 @@ footer {
     }
 
     #why-us {
-        height: 1049.6px;
         flex-flow: column-reverse;
     }
 
     .why-us-right {
         width: 100%;
+    }
+
+    .skills-wrapper {
+        flex-flow: column;
+    }
+
+    #why-us:has(.faq-toggle-1:checked):has(.faq-toggle-2:checked) .why-us-right img {
+        transform: scale(1);
+    }
+    #why-us:has(.faq-toggle-2:checked):has(.faq-toggle-3:checked) .why-us-right img {
+        transform: scale(1);
+    }
+    #why-us:has(.faq-toggle-1:checked):has(.faq-toggle-3:checked) .why-us-right img {
+        transform: scale(1);
+    }
+    #why-us:has(.faq-toggle-1:checked):has(.faq-toggle-2:checked):has(.faq-toggle-3:checked) .why-us-right img {
+        transform: scale(1);
     }
 }
 
@@ -527,5 +756,118 @@ footer {
     animation-duration: 10s;
     animation-fill-mode: both;
     animation-timeline: view();
-    animation-range: entry 30% cover 60%;
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes Progressing {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+.progressing {
+    width: 100%;
+    animation-name: Progressing;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes Popup {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.popup {
+    animation-name: Popup;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes Reaveal-first {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-first {
+    opacity: 0; /* 초기 상태 */
+    animation-name: Reaveal-first;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 20%;
+}
+
+@keyframes Reaveal-second {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-second {
+    opacity: 0; /* 초기 상태 */
+    animation-name: Reaveal-second;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+@keyframes Reaveal-third {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-third {
+    opacity: 0; /* 초기 상태 */
+    animation-name: Reaveal-third;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 30% cover 40%;
+}
+
+@keyframes Reaveal-fourth {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.reveal-fourth {
+    opacity: 0; /* 초기 상태 */
+    animation-name: Reaveal-fourth;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 50%;
 }
