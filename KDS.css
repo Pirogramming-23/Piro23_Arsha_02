@@ -186,26 +186,125 @@ header {
     transform: translateX(4px)
 }
 
-.why-us-container {
-    height: 527.6px;
+.why-us {
+    height: auto;
     background-color: #f5f6f8;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-    flex-flow: row;
 }
 .why-us-left {
     display: flex;
+    max-width: 800px;
     flex-flow: column;
-    flex: 1;
+    margin-top: 24px;
+    padding: 0 60px;
 }
-.why-us-right {
-    height: 100%;
+.why-us-left > h3 {
+    font-weight: bolder;
+    font-size: 34px;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 8px;
+}
+.why-us-left h3 span {
+    font-weight: 400;
+}
+.why-us-left > p {
+    color: srgb(0.267, 0.267, 0.267, 0.267 / 0.7);
+    opacity: 0.3;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.why-us-faq-container {
     display: flex;
-    align-items: center;
-    flex: 1;
+    flex-flow: column;
+    background-color: white;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
+.why-us-faq-container p {
+    color: black;
+    padding-top: 10px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    overflow: visible;
+}
+.why-us-faq {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.faq-toggle {
+    display: none;
+}
+
+/* 초기 상태: 숨겨진 답변 */
+.faq-answer {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* 체크 시 보이게 */
+.faq-toggle:checked ~ .faq-answer {
+    transform: scaleY(1);
+    max-height: 500px;
+}
+
+
+.why-us-faq > h3 {
+    position: relative;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    margin: 0 30px 0 0;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+}
+.why-us-faq > h3 > span {
+    color: #47b2e4;
+    padding-right: 5px;
+    font-weight: 600;
+}
+.why-us-faq > h3:hover {
+    color: #47b2e4;
+}
+.why-us-faq div {
+    position: relative;
+    top: -3px;
+    color: lightgray;
+    font-size: 16px;
+    transform: scaleY(2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.why-us-faq div:hover {
+    color: #47b2e4;
+}
+
+.why-us-right {
+    display: flex;
+    width: 41.7%;
+    height: 100%;
+    margin-top: 24px;
+    padding: 0 60px;
+}
+.why-us-right img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
 
 #skills {
     display: flex;
@@ -351,6 +450,9 @@ footer {
     }
 }
 @media (max-width: 992px) {
+    #about-us {
+        height: 622.6px;
+    }
     .about-us-bottom {
         flex-flow: column;
         justify-content: center;
@@ -358,6 +460,15 @@ footer {
     }
     .about-us-bottom-left, .about-us-bottom-right {
         width: 720px;
+    }
+
+    #why-us {
+        height: 1049.6px;
+        flex-flow: column-reverse;
+    }
+
+    .why-us-right {
+        width: 100%;
     }
 }
 
