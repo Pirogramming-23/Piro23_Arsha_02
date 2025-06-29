@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <link href="./styles/_variables.css" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet">
     <link href="./KDS.css" rel="stylesheet">
     <link href="./HJW.css" rel="stylesheet">
@@ -14,7 +17,10 @@
             <div id="header-top-left">
                 <a href="#"><img src="./logo.png" alt="logo"></a>
                 <div id="changes">
-                    <a href=""></a>
+                    <a href="">
+                        <svg class="icon icon-preview" fill="currentColor"><use xlink:href="https://bootstrapmade.com/assets/img/icons.svg#preview"></use>
+                        </svg>
+                    </a>
                     <a href="#"></a>
                     <a href="#"></a>
                 </div>
@@ -40,9 +46,15 @@
             <div id="hero-left">
                 <h1>Better Solutions For Your Business</h1>
                 <p>We are team of talented designers making websites with Bootstrap</p>
+                <div class="hero-left-buttons">
+                    <a href="#" class="btn-primary">Get Started</a>
+                    <a href="#" class="btn-video">
+                        <span class="play-icon"></span>Watch Vidio
+                    </a>
+                </div>
             </div>
             <div id="hero-right">
-                <img src="./hero-img.png"     class="float-img">
+                <img src="./hero-img.png" class="float-img">
             </div>
         </section>
         <section id="clients">여기는 clients 지나가는 곳</section>

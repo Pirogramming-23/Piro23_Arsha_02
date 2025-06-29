@@ -1,3 +1,5 @@
+@import url('_variables.css');
+
 body {
     background: url("./background.webp") top center no-repeat;
     background-size: cover;
@@ -17,16 +19,16 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 32px;
-    background-color: #023b6d;
+    background-color: var(--heading-color);
 }
 
 #header-bottom {
-    background-color: rgba(40, 58, 90, 0.9);
     padding: 15px 0;
     height: 88.5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--heading-color);
 }
 
 #hero {
@@ -36,7 +38,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: violet;
+    background-color: var(--heading-color);
 }
 
 #clients {
