@@ -1,5 +1,5 @@
 #pricing {
-  padding: 4rem 1rem;
+  padding: 4rem 3rem;
   background-color: #f5f7fa;
   text-align: center;
 }
@@ -27,14 +27,12 @@
 
 .card-content {
   width: 100%;
-  max-width: 380px;
   text-align: left;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 3rem 0;
 }
 
 @media (max-width: 1200px) {
@@ -47,15 +45,17 @@
     width: 320px;
     height: 604px;
   }
-
-  .card-content {
-    padding: 3rem;    
-    font-size: 1.1rem; 
-  }
-
 }
 
 @media (max-width: 992px) {
+  #pricing {
+  padding: 0;
+  margin: 0;
+  }
+  .pricing-container {
+    margin: 0;
+    padding: 0;
+  }
   .pricing-table {
     flex-direction: column;
     align-items: center;
@@ -65,48 +65,28 @@
     width: 720px;
     height: 540px;
   }
-
-  .card-content { 
-    padding: 3rem;    
-    font-size: 1.1rem; 
-  }
 }
 
 @media (max-width: 768px) {
   .pricing-table {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .card {
     width: 540px;
   }
-  .card-content { 
-    padding: 3rem;    
-    font-size: 1.1rem; 
-  }
-  .card h2 {
-    font-weight: 500;
-  }
 }
 
-/* 작은 화면 (모바일): 한 줄씩 */
 @media (max-width: 576px) {
   .pricing-table {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .card {
     width: 540px;
     height: 600px;
-  }
-    .card-content { 
-    padding: 3rem;    
-    font-size: 1.1rem; 
-  }
-  .card h2 {
-    font-weight: 500;
   }
 }
 
