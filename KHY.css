@@ -1,0 +1,194 @@
+@import url("reset.css");
+/*초기 세팅*/
+:root {
+    --primary-font: "Jost", sans-serif;
+    --secondary-font: "Open Sans", sans-serif;
+    --accent-color: #47b2e4;
+    --accent-color-hover: #209dd8;
+    --primary-text-color: #37517e;
+    --secondary-text-color: #444444;
+    --section-bg-color: #f3f5fa;
+    --white-color: #fff;
+    --border-color: #e2e5e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+    background-color: var(--white-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+    color: var(--primary-text-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover { color: var(--accent-color-hover); }
+ul { list-style: none; }
+
+/* 그리드 레이아웃 시작*/
+.container-khy {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media(min width:768px){
+    .container-khy{
+        max-width: 720px;
+    }
+}
+@media(min width:992px){
+    .container-khy{
+        max-width: 960px;
+    }
+}
+@media(min width:1200px){
+    .container-khy{
+        max-width: 1140px;
+    }
+}
+.row-khy {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container { max-width: 960px; }
+    .col-lg-4 { flex: 0 0 33.33333%; max-width: 33.33333%; }
+    .col-lg-5 { flex: 0 0 41.66667%; max-width: 41.66667%; }
+    .col-lg-7 { flex: 0 0 58.33333%; max-width: 58.33333%; }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container { max-width: 1140px; }
+}
+.text-center { text-align: center; }
+
+/* ===================================================================
+   3. 공통 컴포넌트
+====================================================================== */
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+.section-bg { background-color: var(--section-bg-color); }
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+.section-title p { margin-bottom: 0; color: #5e5e5e; }
+
+/* ===================================================================
+   4. 섹션별 스타일링
+====================================================================== */
+
+/* About Us Section */
+#about-us .about-us-bottom { gap: 30px; }
+#about-us .about-us-bottom-left,
+#about-us .about-us-bottom-right {
+    flex: 1;
+    min-width: 300px;
+}
+#about-us ul li { padding: 5px 0; display: flex; align-items: flex-start; }
+#about-us ul i { font-size: 20px; color: var(--accent-color); margin-right: 8px; line-height: 1.5; }
+#about-us .read-more { font-weight: 500; font-size: 16px; padding: 10px 28px; border-radius: 4px; border: 2px solid var(--accent-color); color: var(--accent-color); }
+#about-us .read-more:hover { background-color: var(--accent-color); color: var(--white-color); }
+
+/* FAQ Section */
+.faq-list details { border-bottom: 1px solid var(--border-color); margin-bottom: 15px; padding-bottom: 15px; }
+.faq-list summary { display: flex; justify-content: space-between; align-items: center; font-family: "Poppins", sans-serif; font-size: 18px; font-weight: 400; cursor: pointer; color: var(--primary-text-color); transition: 0.3s; }
+.faq-list summary:hover { color: var(--accent-color); }
+.faq-list .faq-content { padding: 15px 0 0 0; color: #5e5e5e; line-height: 1.7; }
+.faq-list details[open] summary { color: var(--accent-color); }
+.faq-list details[open] .icon-show, .faq-list details:not([open]) .icon-close { display: none; }
+
+/* Subscribe Section */
+#subscribe { background-color: var(--section-bg-color); }
+#subscribe .row { align-items: center; }
+#subscribe .subscribe-text { flex: 1; padding-right: 20px; }
+#subscribe .subscribe-img { flex: 1; text-align: center; }
+#subscribe h2 { font-size: 36px; font-weight: 700; margin-bottom: 20px; }
+#subscribe p { line-height: 1.6; margin-bottom: 30px; }
+#subscribe .subscribe-form { display: flex; border: 1px solid var(--border-color); border-radius: 50px; padding: 5px; background: var(--white-color); }
+#subscribe .subscribe-form input[type="email"] { flex-grow: 1; border: none; outline: none; padding: 10px 20px; font-size: 16px; background: transparent; }
+#subscribe .subscribe-form button { border: none; padding: 10px 30px; border-radius: 50px; background-color: var(--accent-color); color: var(--white-color); font-size: 16px; font-weight: 600; cursor: pointer; transition: background-color 0.3s; }
+#subscribe .subscribe-form button:hover { background-color: var(--accent-color-hover); }
+#subscribe .subscribe-img img { max-width: 100%; height: auto; }
+
+/* Recent Blog Posts */
+.post-box { box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08); transition: 0.3s; height: 100%; overflow: hidden; position: relative; display: flex; flex-direction: column; background: var(--white-color); }
+.post-box:hover { transform: translateY(-5px); box-shadow: 0px 5px 30px rgba(1, 41, 112, 0.1); }
+.post-img { overflow: hidden; position: relative; }
+.post-img img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
+.post-box:hover .post-img img { transform: scale(1.1); }
+.post-date { font-size: 14px; background: #e7f7fe; color: var(--accent-color); padding: 7px 15px; border-radius: 50px; position: absolute; bottom: 15px; right: 15px; }
+.post-title { font-size: 20px; font-weight: 700; padding: 25px; color: var(--primary-text-color); }
+
+/* Contact Section */
+#contact .info { padding: 30px; width: 100%; background: #fff; box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12); }
+#contact .info-item { display: flex; align-items: center; margin-bottom: 25px; }
+#contact .info-item i { font-size: 24px; color: var(--accent-color); background: #e7f5fb; width: 44px; height: 44px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; }
+#contact .info-item h4 { padding: 0; font-size: 20px; font-weight: 600; margin: 0; }
+#contact .info-item p { padding: 0; margin: 0; }
+#contact .contact-form { width: 100%; padding: 30px; background: #fff; box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12); }
+#contact .form-group { margin-bottom: 20px; }
+#contact .form-control { display: block; width: 100%; padding: 10px 15px; font-size: 14px; border-radius: 4px; border: 1px solid var(--border-color); }
+#contact .contact-form button[type="submit"] { background: var(--accent-color); border: 0; padding: 10px 24px; color: #fff; transition: 0.4s; border-radius: 4px; }
+#contact .contact-form button[type="submit"]:hover { background: var(--accent-color-hover); }
+
+/* Footer */
+#footer-top { padding: 60px 0 30px 0; background: var(--section-bg-color); }
+#footer-top .row { gap: 30px 0; }
+.footer-col { width: 100%; }
+@media (min-width: 768px) { .footer-col { flex: 1; } } /* 컬럼들을 동일한 너비로 */
+#footer-top h3 { font-size: 28px; font-weight: 600; }
+#footer-top h4 { font-size: 16px; font-weight: bold; padding-bottom: 12px; }
+#footer-top ul li { padding: 5px 0; display: flex; align-items: center; }
+#footer-top ul i { color: var(--accent-color); margin-right: 5px; }
+.social-links a { font-size: 18px; display: inline-flex; justify-content: center; align-items: center; background: var(--accent-color); color: #fff; width: 36px; height: 36px; border-radius: 50%; margin-right: 4px; transition: 0.3s; }
+.social-links a:hover { background: var(--accent-color-hover); }
+#footer-bottom { padding: 30px 0; background: #37517e; color: #fff; }
+#footer-bottom .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+#footer-bottom .credits a { color: var(--accent-color); }
