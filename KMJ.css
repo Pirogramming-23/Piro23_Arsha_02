@@ -341,16 +341,6 @@ ul li {
   pointer-events: none;
 }
 
-#t1:checked ~ section#testimonials-kmj .t1-kmj,
-#t2:checked ~ section#testimonials-kmj .t2-kmj,
-#t3:checked ~ section#testimonials-kmj .t3-kmj,
-#t4:checked ~ section#testimonials-kmj .t4-kmj,
-#t5:checked ~ section#testimonials-kmj .t5-kmj {
-  animation: none;
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .dot-kmj.d1-kmj { animation: d1Cycle 15s infinite; }
 .dot-kmj.d2-kmj { animation: d2Cycle 15s infinite; }
 .dot-kmj.d3-kmj { animation: d3Cycle 15s infinite; }
@@ -407,12 +397,6 @@ ul li {
 .t3-kmj { animation: fade3 15s infinite; }
 .t4-kmj { animation: fade4 15s infinite; }
 .t5-kmj { animation: fade5 15s infinite; }
-
-#t1:checked ~ .testimonial-kmjs-container .slider-kmj { animation: none; transform: translateX(0%); }
-#t2:checked ~ .testimonial-kmjs-container .slider-kmj { animation: none; transform: translateX(-100%); }
-#t3:checked ~ .testimonial-kmjs-container .slider-kmj { animation: none; transform: translateX(-200%); }
-#t4:checked ~ .testimonial-kmjs-container .slider-kmj { animation: none; transform: translateX(-300%); }
-#t5:checked ~ .testimonial-kmjs-container .slider-kmj { animation: none; transform: translateX(-400%); }
 
 .slider-kmj {
   display: flex;
