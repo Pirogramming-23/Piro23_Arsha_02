@@ -282,8 +282,15 @@
 #clients {
     padding: 0 4rem;
     display: flex;
-    background-color: aqua;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f7fa;
+    overflow: hidden;
 }
+.clients-logo-track {
+    display: flex;
+}
+
 
 #about-us {
     scroll-margin-top: 120.5px;
