@@ -469,6 +469,7 @@ header {
     align-items: center;
     background-color: #f5f6f8;
     padding: 60px 0;
+    height: auto;
 }
 
 .services-top {
@@ -528,18 +529,29 @@ header {
 }
 
 .services-card {
+    position: relative;
     display: flex;
     flex-flow: column;
     background-color: white;
     box-shadow: 0 5px 90px 0px rgba(0, 0, 0, 0.1);
     padding: 50px 30px;
-    transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.3s !important;
     width: 261px;
     height: 275px;
 }
 
+.services-card:hover {
+    bottom: 10px;
+}
+
+.services-card:hover a {
+    color:#47b2e4;
+}
+
 .services-card-img {
+    position: relative;
     transform: scale(0.8);
+    right: 10px;
 }
 
 .services-card a {
@@ -558,18 +570,180 @@ header {
 }
 
 .services-bottom {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 24px;
+    margin-left : 100px;
+    margin-right: 100px;
 }
 
 #work-process {
-    height: 896.2px;
+    height: auto;
     padding: 60px 0;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     background-color: white;
+}
+
+.work-process-top {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.work-process-top-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.work-process-top-container > h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+.work-process-top-container > h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: rgba(68, 68, 68, 0.4);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+.work-process-top-container > h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.work-process-top-container p {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+.work-process-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.work-process-card {
+    position: relative;
+    width: 380px;
+    height: 613.8px;
+    background-color: white;
+    box-shadow: 0 5px 90px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.work-process-card:hover {
+    bottom: 15px;
+}
+
+.work-process-card:hover .steps-img-container img {
+    transform: scale(0.6);
+}
+
+.steps-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    height: 280px;
+}
+
+.steps-card-img {
+    object-fit: contain;
+    transform: scale(0.55);
+    transition: all 0.3s ease-in-out;
+}
+
+.steps-content {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 40px 30px 30px;
+}
+
+.steps-number {
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background-color: #47b2e4;
+    color: white;
+    border-radius: 50%;
+    font-family: "Jost", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.steps-content > h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+    line-height: 1.2;
+}
+
+.steps-content > p {
+    color: rgba(68, 68, 68, 0.8);
+    margin-bottom: 25px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.steps-feature-items {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: center;
+    gap: 10px;
+}
+.steps-feature-items-img {
+    overflow: hidden;
+}
+.steps-feature-items-img > img {
+    object-fit: cover;
+    width: 20px;
+    height: 20px;
+}
+.steps-feature-items > span {
+    color: rgba(68, 68, 68, 0.85);
+    font-size: 14px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
 }
 
 #call-to-action {
@@ -577,8 +751,55 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #37517e;
-    opacity: 0.65;
+    background-color: rgba(55, 81, 126, 0.65);
+}
+
+.call-to-action-left {
+    display: flex;
+    flex-flow: column;
+    width: 855px;
+    padding: 0 12px;
+}
+.call-to-action-left h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    margin-bottom: 8px;
+}
+
+.call-to-action-left p {
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.call-to-action-right {
+    width: 285px;
+    padding: 0 12px;
+    text-align: center;
+}
+.call-to-action-btn {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid white;
+    color: white;
+    vertical-align: middle;
+}
+
+.call-to-action-btn:hover {
+    background-color: #47b2e4;
+    border: 2px solid #47b2e4;
 }
 
 #portfolio {
@@ -596,6 +817,188 @@ header {
     height: 749.4px;
     padding: 60px 0;
     background-color: white;
+    flex-flow: column;
+    height: auto;
+}
+
+.team-top {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.team-top-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.team-top-container > h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+.team-top-container > h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: rgba(68, 68, 68, 0.4);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+.team-top-container > h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.team-top-container p {
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+.team-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 77.2px;
+    margin-right: 77.2px;
+    gap: 20px;
+    max-width: 1140px;
+}
+
+.team-card {
+    position: relative;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.5s;
+    padding: 30px;
+    height: 100%;
+    transition: bottom 0.3s ease;
+}
+
+.team-card:hover {
+    bottom: 10px;
+}
+
+.team-card-img-container {
+    display: flex;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-card-img-container > img {
+    transition: 0.3s;
+    object-fit: cover;
+    transform: scale(0.15);
+}
+
+.team-card-content {
+    padding-left: 30px;
+}
+
+.team-card-content h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+    line-height: 1.2;
+}
+
+.team-card-content span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    color: #444444;
+    position: relative;
+}
+
+.team-card-content span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: rgba(68, 68, 68, 0.15);
+    bottom: 0;
+    left: 0;
+}
+
+.team-card-content p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: #444444;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+}
+
+.team-card-social {
+    display: flex;
+    margin-top: 12px;
+    align-items: center;
+    justify-self: start;
+    width: 100%;
+    gap: 10px;
+}
+
+.team-card-social a {
+    background-color: rgba(68, 68, 68, 0.06);
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.team-card-social a svg {
+    width: 18px;
+    height: 18px;
+}
+.team-card-social a:hover {
+    background-color: #47b2e4;
+}
+.team-card-social a:hover svg {
+    color: white;
+    fill: white;
+}
+.team-card-social a:nth-child(4):hover svg rect{
+    color: white;
+    fill: white;
+}
+.team-card-social a:nth-child(4):hover svg path{
+    color: #47b2e4;
+    fill: #47b2e4;
 }
 
 #pricing {
@@ -691,6 +1094,33 @@ footer {
     .skills-img-container > img {
         width: 456px;
     }
+
+    .services-bottom {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .services-card {
+        width: 456px;
+    }
+
+    .work-process-card {
+        width: 320px;
+        height: 583.9px;
+    }
+
+    .steps-content h3 {font-size: 22px;}
+    .steps-content p {font-size: 15px;}
+
+    #call-to-action {
+        flex-flow: column;
+    }
+
+    .call-to-action-left h3 {
+        text-align: center;
+    }
+
+    .team-bottom {max-width: 960px;}
+
 }
 @media (max-width: 992px) {
     #about-us {
@@ -729,10 +1159,61 @@ footer {
     #why-us:has(.faq-toggle-1:checked):has(.faq-toggle-2:checked):has(.faq-toggle-3:checked) .why-us-right img {
         transform: scale(1);
     }
+
+    .services-card {
+        width: 336px;
+        height: 251px;
+    }
+
+    .work-process-bottom {flex-flow: column;}
+
+    .work-process-card {
+        width: 720px;
+        height: 503px;
+    }
+
+    .steps-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        left: 25px;
+        top: -25px;
+    }
+
+    .steps-content h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .steps-content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .steps-img-container {
+        width: 696px;
+        height: 220px;
+    }
+    .steps-card-img {object-fit: cover;}
+
+    .call-to-action-left, .call-to-action-right {
+        width: 720px;
+    }
+
+    .team-bottom {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
 }
 
 @media (max-width: 768px) {
+    .services-bottom {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
 
+    .services-card {
+        width: 516px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -774,7 +1255,7 @@ footer {
     animation-duration: 10s;
     animation-fill-mode: both;
     animation-timeline: view();
-    animation-range: entry 30% cover 40%;
+    animation-range: entry 30% cover 35%;
 }
 
 @keyframes Popup {
