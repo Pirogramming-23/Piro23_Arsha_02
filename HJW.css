@@ -1,5 +1,13 @@
 @import url('./styles/_variables.css');
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 #header-top {
     display: flex;
     justify-content: space-between;
@@ -123,9 +131,11 @@
 }
 
 #header-bottom {
+    height: 88.5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--heading-color);
     padding: 0 4rem;
 }
 #header-bottom-left {
@@ -281,6 +291,7 @@
 
 #clients {
     padding: 0 4rem;
+    height: 69.69px;
     display: flex;
     justify-content: space-between;
     align-items: center;

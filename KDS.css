@@ -1,53 +1,7 @@
-@import url('_variables.css');
-
 body {
     background: url("./background.webp") top center no-repeat;
     background-size: cover;
     background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-#header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 32px;
-    background-color: var(--heading-color);
-}
-
-#header-bottom {
-    padding: 15px 0;
-    height: 88.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--heading-color);
-}
-
-#hero {
-    width: 100%;
-    min-height: 80vh;
-    padding: 152px 0 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--heading-color);
-}
-
-#clients {
-    padding: 12px 0;
-    background-color: #f5f6f8;
-    height: 69.69px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #about-us {
