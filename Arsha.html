@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="./reset.css" rel="stylesheet">
     <link href="./_variables.css" rel="stylesheet">
     <link href="./KDS.css" rel="stylesheet">
     <link href="./KMJ.css" rel="stylesheet">
+    <link href="./styles/portfolio.css" rel="stylesheet">
     <title>Arsha Bootstrap Template Demo</title>
 </head>
 <body>
@@ -25,7 +27,166 @@
         <section id="services">Services</section>
         <section id="work-process">Work-process</section>
         <section id="call-to-action">Call-to-action</section>
-        <section id="portfolio">Portfolio</section>
+        <section id="portfolio">
+            <div class="portfolio__header">
+                <h2>Portfolio</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div>
+            <div class="portfolio__container">
+                <input type="radio" name="tabs" id="all" class="checked" checked>
+                <input type="radio" name="tabs" id="app" class="checked">
+                <input type="radio" name="tabs" id="card" class="checked">
+                <input type="radio" name="tabs" id="web" class="checked">
+                <div class="portfolio__content">
+                    <ul class="portfolio__tab">
+                        <li><label for="all">All</label></li>
+                        <li><label for="app">App</label></li>
+                        <li><label for="card">Card</label></li>
+                        <li><label for="web">Web</label></li>
+                    </ul>
+                    <div class="portfolio__product">
+                        <div class="items app" id="content1">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-1.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>App 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items card" id="content2">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-1.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Product 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="items web" id="content3">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-3.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Branding 1</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items app" id="content4">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-4.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>App 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items card" id="content5">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-2.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Product 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items web" id="content6">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-portrait-3.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Branding 2</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="items app" id="content7">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-7.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>App 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items card" id="content8">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-8.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Product 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items web" id="content9">
+                            <div class="img__wrapper">
+                                <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/portfolio/portfolio-9.webp" alt="">
+                                <div class="info__bar">
+                                    <h4>Branding 3</h4>
+                                    <p>Lorem ipsum, dolor sit</p>
+                                    <a href="" class="link">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                    <a href="" class="detail__link">
+                                        <i class="fas fa-link"></i>
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="team">Team</section>
         <section id="pricing">
         <div class="pricing-container">
