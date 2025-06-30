@@ -802,14 +802,6 @@ header {
     border: 2px solid #47b2e4;
 }
 
-#portfolio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 814.95px;
-    background-color: white;
-}
-
 #team {
     display: flex;
     justify-content: center;
@@ -999,91 +991,6 @@ header {
 .team-card-social a:nth-child(4):hover svg path{
     color: #47b2e4;
     fill: #47b2e4;
-}
-
-#pricing {
-    background-color: #f5f6f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-}
-
-#testimonials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    height: 628.7px;
-    background-color: white;
-}
-
-#faq {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f6f8;
-    padding: 60px 0;
-    height: 779.4px;
-}
-
-#subscribe {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    background-color: white;
-    height: 562.29px;
-}
-
-#recent-blog-posts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    background-color: #f5f6f8;
-    height: 723.64px;
-}
-
-#contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    background-color: white;
-    height: 886.4px;
-}
-
-#newsletter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    background-color: #f5f6f8;
-    height: 278.4px;
-}
-
-footer {
-    background-color: white;
-}
-
-#footer-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 12px 0;
-    margin: 0 55.2px;
-    height: 245.2px;
-    background-color: wheat;
-}
-
-#footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 12px 50px;
-    margin: 24px 40px 0;
-    background-color: whitesmoke;
 }
 
 @media (max-width: 1200px) {
