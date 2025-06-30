@@ -896,4 +896,5 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 .reveal-second { animation-range: entry 7%  cover 20%; }
 .reveal-third  { animation-range: entry 15% cover 35%; }
 .reveal-fourth { animation-range: entry 20% cover 40%; }
+.reveal-fifth { animation-range: entry 10% cover 20%; }
 
