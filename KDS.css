@@ -5,6 +5,8 @@ body {
 }
 
 #about-us {
+    display: flex;
+    flex-flow: column;
     height: 443.4px;
     padding: 60px 0;
     background-color: white;
