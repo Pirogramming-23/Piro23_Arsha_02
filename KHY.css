@@ -870,9 +870,13 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 }
 /*애니메이션*/
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUpHold {
+  /* 진짜 애니메이션: 0%→5% 구간 */
+  0%   { opacity:0; transform:translateY(40px); }
+  30%   { opacity:1; transform:translateY(0);   }
+
+  /* 5% 이후엔 변화 없음 */
+  100% { opacity:1; transform:translateY(0);   }
 }
 
 /* 2. 공통 규칙  */
@@ -882,12 +886,12 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
   view-timeline-axis: block;      
 
   animation-name: fadeInUp;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
 
   animation-timeline: --reveal;    
-  animation-range: entry 5% cover 30%;  
+  animation-range: entry 0% cover 30%;  
   opacity: 0;                       
 }
 
