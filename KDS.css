@@ -4,10 +4,11 @@ body {
     background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
 }
 
+
 #about-us {
     display: flex;
     flex-flow: column;
-    height: 443.4px;
+    height: auto;
     padding: 60px 0;
     background-color: white;
 }
@@ -623,7 +624,7 @@ body {
 }
 
 .work-process-card:hover .steps-img-container img {
-    transform: scale(0.6);
+    transform: scale(1.2);
 }
 
 .steps-img-container {
@@ -637,7 +638,7 @@ body {
 
 .steps-card-img {
     object-fit: contain;
-    transform: scale(0.55);
+    /* transform: scale(0.55); */
     transition: all 0.3s ease-in-out;
 }
 
@@ -867,7 +868,7 @@ body {
 .team-card-img-container > img {
     transition: 0.3s;
     object-fit: cover;
-    transform: scale(0.15);
+    /* transform: scale(0.15); */
 }
 
 .team-card-content {
@@ -988,9 +989,6 @@ body {
 
 }
 @media (max-width: 992px) {
-    #about-us {
-        height: 622.6px;
-    }
     .about-us-bottom {
         flex-flow: column;
         justify-content: center;
@@ -1096,7 +1094,7 @@ body {
     }
 }
 
-.reveal {
+.revealKDS {
     opacity: 0; /* 초기 상태 */
     animation-name: fadeInUp;
     animation-duration: 10s;
@@ -1114,7 +1112,7 @@ body {
     }
 }
 
-.progressing {
+.progressingKDS {
     width: 100%;
     animation-name: Progressing;
     animation-duration: 10s;
@@ -1134,7 +1132,7 @@ body {
     }
 }
 
-.popup {
+.popupKDS {
     animation-name: Popup;
     animation-duration: 10s;
     animation-fill-mode: both;
@@ -1152,7 +1150,7 @@ body {
         transform: translateY(0);
     }
 }
-.reveal-first {
+.reveal-firstKDS {
     opacity: 0; /* 초기 상태 */
     animation-name: Reaveal-first;
     animation-duration: 10s;
@@ -1171,7 +1169,7 @@ body {
         transform: translateY(0);
     }
 }
-.reveal-second {
+.reveal-secondKDS {
     opacity: 0; /* 초기 상태 */
     animation-name: Reaveal-second;
     animation-duration: 10s;
@@ -1190,7 +1188,7 @@ body {
         transform: translateY(0);
     }
 }
-.reveal-third {
+.reveal-thirdKDS {
     opacity: 0; /* 초기 상태 */
     animation-name: Reaveal-third;
     animation-duration: 10s;
@@ -1209,7 +1207,7 @@ body {
         transform: translateY(0);
     }
 }
-.reveal-fourth {
+.reveal-fourthKDS {
     opacity: 0; /* 초기 상태 */
     animation-name: Reaveal-fourth;
     animation-duration: 10s;
