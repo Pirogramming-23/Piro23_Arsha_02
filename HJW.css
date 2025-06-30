@@ -25,7 +25,6 @@ header {
 
 #changes {
     height: 100%;
-    width: 300px;
     display: flex;
     padding: 3px 0 0 20px;
 }
@@ -222,6 +221,9 @@ header {
 @media (max-width: 992px) {
     #header-bottom {
         height: 66px;
+    }
+    #changes {
+        display: none;
     }
 }
 
