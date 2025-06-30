@@ -1,11 +1,5 @@
 @import url('./styles/_variables.css');
 
-body {
-    background: url("./background.webp") top center no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
-}
-
 header {
     position: fixed;
     top: 0;
@@ -369,35 +363,71 @@ header {
 }
 
 #clients {
-    padding: 0 4rem;
     height: 69.69px;
+    width: 100%;
     display: flex;
+    padding: 16px 40px;
     justify-content: center;
     align-items: center;
     background-color: #f5f7fa;
     overflow: hidden;
 }
+.clients-viewport {
+    width: calc(216px*6);
+    overflow: hidden;
+}
 .clients-logo-track {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-    animation: scroll-logos 8s steps(8) infinite;
+    animation: slidePause 25s linear infinite;
 }
 
 .clients-logo-item {
-    width: 86px;
-    height: 24.75px;
+    flex: 0 0 auto;
+    width: 216px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.clients-logo-item img {
-    height: 50px;
-    object-fit: contain;
+.clients-logo-item > img {
+    width: 116px;
+    height: 36px;
 }
-@keyframes scroll-logos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+
+.clients-logo-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slidePause var(--total-time) linear infinite;
 }
+
+@keyframes slidePause {
+    0%      { transform: translateX(0); }
+
+    3.125%  { transform: translateX(-216px); }
+    12.5%   { transform: translateX(-216px); }
+
+    15.625% { transform: translateX(calc(-2 * 216px)); }
+    25%     { transform: translateX(calc(-2 * 216px)); }
+
+    28.125%     { transform: translateX(calc(-3 * 216px)); }
+    37.5%     { transform: translateX(calc(-3 * 216px)); }
+
+    40.625%     { transform: translateX(calc(-4 * 216px)); }
+    50%     { transform: translateX(calc(-4 * 216px)); }
+
+    53.125%     { transform: translateX(calc(-5 * 216px)); }
+    62.5%     { transform: translateX(calc(-5 * 216px)); }
+
+    65.625%     { transform: translateX(calc(-6 * 216px)); }
+    75%     { transform: translateX(calc(-6 * 216px)); }
+
+    78.125%     { transform: translateX(calc(-7 * 216px)); }
+    87.5%     { transform: translateX(calc(-7 * 216px)); }
+
+    90.625%     { transform: translateX(calc(-8 * 216px)); }
+    100%    { transform: translateX(calc(-8 * 216px)); }
+}
+
 
 #about-us {
     scroll-margin-top: 120.5px;
