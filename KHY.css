@@ -371,7 +371,7 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
     margin-bottom: 30px; 
 }
 @media (min-width: 768px) { .col-blog { width: 50%; } }
-@media (min-width: 992px) { .col-blog { width: 33.333%; } }
+@media (min-width: 1200px) { .col-blog { width: 33.333%; } }
 .post-box { 
     box-shadow: 0 0 30px rgba(1, 41, 112, 0.08); 
     transition: 0.3s; 
@@ -684,21 +684,26 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
     background: #fff;
 }
 
-#footer-top .footer-col {
+#footer-top .row-khy {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+#footer-top .footer-col,
+#footer-top .footer-links-group {
     width: 100%;
     padding: 0 15px;
     margin-bottom: 30px;
 }
 
-@media (min-width: 768px) {
-    #footer-top .footer-col {
-        width: 50%;
-    }
+#footer-top .footer-links-group {
+    display: flex;
+    flex-wrap: wrap;
 }
-@media (min-width: 992px) {
-    #footer-top .footer-col {
-        width: 25%;
-    }
+
+#footer-top .footer-links-group .footer-col {
+    width: 100%;
 }
 
 #footer-top h3 {
@@ -790,7 +795,6 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 #footer-bottom {
     padding: 30px 0;
     background-color: #fff;
-   
 }
 
 #footer-bottom .container-khy {
@@ -799,7 +803,8 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
     padding-top: 30px;
 }
 
-#footer-bottom .copyright {
+#footer-bottom .copyright,
+#footer-bottom .credits {
     color: #444444;
     font-size: 14px;
 }
@@ -811,7 +816,6 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 #footer-bottom .credits {
     padding-top: 5px;
     font-size: 13px;
-    color: #444444;
 }
 
 #footer-bottom .credits a {
@@ -823,9 +827,48 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
     color: #2b96cc;
 }
 
+@media (min-width: 576px) {
+    #footer-top .footer-links-group .footer-col {
+        width: 50%;
+    }
+}
 
+@media (min-width: 768px) {
+    #footer-top .row-khy {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    #footer-top .col-arsha {
+        width: 30%;
+    }
+    #footer-top .footer-links-group {
+        width: 65%;
+    }
+    #footer-top .col-social {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 
-/* 애니메이션 적용 */
+@media (min-width: 992px) {
+    #footer-top .row-khy {
+        justify-content: flex-start;
+    }
+    #footer-top .col-arsha {
+        width: 25%;
+    }
+    #footer-top .footer-links-group {
+        width: 50%;
+    }
+    #footer-top .footer-links-group .footer-col {
+        width: 50%;
+    }
+    #footer-top .col-social {
+        width: 25%;
+        margin-top: 0;
+    }
+}
+/*애니메이션*/
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -838,30 +881,30 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 }
 
 .reveal {
-  animation-fill-mode: both;
-  animation-name: fade-in-up;
-  animation-timing-function: ease-out;
-  animation-timeline: view();
-  animation-range-start: entry 5%;
-  animation-range-end: entry 40%;
+    animation-fill-mode: both;
+    animation-name: fade-in-up;
+    animation-timing-function: ease-out;
+    animation-timeline: view();
+    animation-range-start: entry 5%;
+    animation-range-end: entry 40%;
 }
 
 .faq-list .reveal:nth-child(2) {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 .faq-list .reveal:nth-child(3) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 .faq-list .reveal:nth-child(4) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 .faq-list .reveal:nth-child(5) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 #recent-blog-posts .row-khy .reveal:nth-child(2) {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 #recent-blog-posts .row-khy .reveal:nth-child(3) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
