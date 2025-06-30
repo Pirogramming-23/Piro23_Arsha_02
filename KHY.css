@@ -85,7 +85,8 @@ img { max-width: 100%; height: auto; }
 .row-khy { display: flex; flex-wrap: wrap; margin: 0 -15px; }
 .text-center { text-align: center; }
 
-section { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); }
+/*얘가 공통으로 적용되면 애니메이션이 깨집니다!*/
+/* section { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); } */
 section h1, section h2, section h3, section h4, section h5, section h6 { color: var(--heading-color); }
 
 .section-title-khy {
@@ -175,6 +176,7 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 
 
 /* FAQ */
+#faq { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); }
 .faq-list { 
     
     list-style: none; 
@@ -283,6 +285,8 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 }
 
 /* Subscribe Section */
+#subscribe { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); }
+
 #subscribe .row-khy { 
     align-items: center; 
     gap: 30px 0; 
@@ -365,6 +369,7 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 #subscribe .subscribe-form button:hover { background-color: var(--nav-hover-color); }
 
 /* Recent Blog Posts */
+#recent-blog-posts { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); }
 .col-blog { 
     width: 100%; 
     padding: 0 15px; 
@@ -480,7 +485,7 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 }
 
 /* Contact Section */
-
+#contact { padding: 60px 0; overflow: hidden; background-color: var(--background-color); color: var(--default-color); }
 #contact .row-khy { 
     gap: 30px 0; 
 }
@@ -901,4 +906,3 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
 .reveal-third  { animation-range: entry 15% cover 35%; }
 .reveal-fourth { animation-range: entry 20% cover 40%; }
 .reveal-fifth { animation-range: entry 10% cover 20%; }
-
