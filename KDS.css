@@ -4,50 +4,6 @@ body {
     background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-
-#header-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    background-color: #023b6d;
-}
-
-#header-bottom {
-    background-color: rgba(40, 58, 90, 0.9);
-    padding: 15px 0;
-    height: 88.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#hero {
-    width: 100%;
-    min-height: 80vh;
-    padding: 120px 0 60px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: violet;
-}
-
-#clients {
-    padding: 12px 0;
-    background-color: #f5f6f8;
-    height: 69.69px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #about-us {
     height: 443.4px;
     padding: 60px 0;
