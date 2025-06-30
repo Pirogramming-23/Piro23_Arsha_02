@@ -78,7 +78,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 200px;
+    padding: 0 10px;
 }
 .template-home {
     height: 24px;
@@ -158,6 +158,10 @@ header {
 .header-menu {
     padding: 18px 15px;
 }
+.header-menu-after {
+    display: none;
+    padding: 0 20px 0 0;
+}
 .header-menu > span {
     font: 15px var(--nav-font);
     color: white;
@@ -167,6 +171,11 @@ header {
     width: 20px;
     height: 20px;
     padding: 8px 0 0 0;
+}
+.header-menu-after > svg {
+    color: white;
+    width: 40px;
+    height: 40px;
 }
 .header-started {
     display: flex;
@@ -182,6 +191,30 @@ header {
     font: 14px var(--default-font);
     background-color: var(--accent-color);
     color: white;
+}
+
+@media (max-width: 1200px) {
+    #header-bottom {
+        padding: 0;
+    }
+    .header-menu {
+        display: none;
+    }
+    .header-menu-after {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    #header-bottom {
+        height: 66px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header-top-left {
+        display: none;
+    }
 }
 
 #hero {
@@ -295,19 +328,76 @@ header {
     font-weight: 700;
 }
 
+@media (max-width: 992px) {
+    #hero {
+        flex-direction: column-reverse;
+    }
+    #hero-right, #hero-left {
+        width: 100%;
+    }
+    .float-img {
+        width: 696px;
+        height: 576.42px;
+    }
+}
+@media (max-width: 768px) {
+    .float-img {
+        width: 516px;
+        height: 427.35px;
+    }
+}
+@media (max-width: 576px) {
+    #hero {
+        padding: 152px 0 60px 0;
+    }
+    #hero-right {
+        width: 100% ;
+    }
+    .float-img {
+        width: 521.6px;
+        height: 431.99px;
+    }
+    #hero-left > h1 {
+        font-size: 28px;
+    }
+    #hero-left > p {
+        font-size: 18px;
+    }
+    .btn-primary, .btn-video > div {
+        font-size: 13px;
+    }
+}
+
 #clients {
     padding: 0 4rem;
     height: 69.69px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #f5f7fa;
     overflow: hidden;
 }
 .clients-logo-track {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    animation: scroll-logos 8s steps(8) infinite;
 }
 
+.clients-logo-item {
+    width: 86px;
+    height: 24.75px;
+}
+.clients-logo-item img {
+    height: 50px;
+    object-fit: contain;
+}
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 #about-us {
     scroll-margin-top: 120.5px;
