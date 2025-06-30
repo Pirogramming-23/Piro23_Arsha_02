@@ -102,13 +102,13 @@ header {
     opacity: 0.65;
 }
 
-#portfolio {
+/* #portfolio {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 814.95px;
     background-color: white;
-}
+} */
 
 #team {
     display: flex;
