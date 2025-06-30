@@ -1,3 +1,212 @@
+/* Base */
+body {
+    background: url("./background.webp") top center no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    background-color: #023b6d;
+}
+
+#header-bottom {
+    background-color: rgba(40, 58, 90, 0.9);
+    padding: 15px 0;
+    height: 88.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero {
+    width: 100%;
+    min-height: 80vh;
+    padding: 120px 0 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+}
+
+#clients {
+    padding: 12px 0;
+    background-color: #f5f6f8;
+    height: 69.69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 443.4px;
+    padding: 60px 0;
+    background-color: white;
+}
+
+#why-us {
+    height: 527.6px;
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 508.8px;
+    padding: 60px 0;
+    background-color: white;
+}
+
+#services {
+    height: 557.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f8;
+    padding: 60px 0;
+}
+
+#work-process {
+    height: 896.2px;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#call-to-action {
+    height: 345.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #37517e;
+    opacity: 0.65;
+}
+
+/* #portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 814.95px;
+    background-color: white;
+} */
+
+#team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 749.4px;
+    padding: 60px 0;
+    background-color: white;
+}
+
+#pricing {
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+#testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    height: 628.7px;
+    background-color: white;
+}
+
+#faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f6f8;
+    padding: 60px 0;
+    height: 779.4px;
+}
+
+#subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: white;
+    height: 562.29px;
+}
+
+#recent-blog-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #f5f6f8;
+    height: 723.64px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: white;
+    height: 886.4px;
+}
+
+#newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #f5f6f8;
+    height: 278.4px;
+}
+
+footer {
+    background-color: white;
+}
+
+#footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 12px 0;
+    margin: 0 55.2px;
+    height: 245.2px;
+    background-color: wheat;
+}
+
+#footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 12px 50px;
+    margin: 24px 40px 0;
+    background-color: whitesmoke;
+}
+
+
+
 /* Overall */
 #portfolio{
     color: var(--default-color);
