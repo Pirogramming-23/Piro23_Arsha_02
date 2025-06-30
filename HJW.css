@@ -1,11 +1,5 @@
 @import url('./styles/_variables.css');
 
-body {
-    background: url("./background.webp") top center no-repeat;
-    background-size: cover;
-    background-attachment: fixed; /* 선택: 스크롤 시 고정된 배경 */
-}
-
 header {
     position: fixed;
     top: 0;
@@ -78,7 +72,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 200px;
+    padding: 0 10px;
 }
 .template-home {
     height: 24px;
@@ -158,6 +152,10 @@ header {
 .header-menu {
     padding: 18px 15px;
 }
+.header-menu-after {
+    display: none;
+    padding: 0 20px 0 0;
+}
 .header-menu > span {
     font: 15px var(--nav-font);
     color: white;
@@ -167,6 +165,11 @@ header {
     width: 20px;
     height: 20px;
     padding: 8px 0 0 0;
+}
+.header-menu-after > svg {
+    color: white;
+    width: 40px;
+    height: 40px;
 }
 .header-started {
     display: flex;
@@ -182,6 +185,30 @@ header {
     font: 14px var(--default-font);
     background-color: var(--accent-color);
     color: white;
+}
+
+@media (max-width: 1200px) {
+    #header-bottom {
+        padding: 0;
+    }
+    .header-menu {
+        display: none;
+    }
+    .header-menu-after {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    #header-bottom {
+        height: 66px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header-top-left {
+        display: none;
+    }
 }
 
 #hero {
@@ -295,17 +322,194 @@ header {
     font-weight: 700;
 }
 
+@media (max-width: 992px) {
+    #hero {
+        flex-direction: column-reverse;
+    }
+    #hero-right, #hero-left {
+        width: 100%;
+    }
+    .float-img {
+        width: 696px;
+        height: 576.42px;
+    }
+}
+@media (max-width: 768px) {
+    .float-img {
+        width: 516px;
+        height: 427.35px;
+    }
+}
+@media (max-width: 576px) {
+    #hero {
+        padding: 152px 0 60px 0;
+    }
+    #hero-right {
+        width: 100% ;
+    }
+    .float-img {
+        width: 521.6px;
+        height: 431.99px;
+    }
+    #hero-left > h1 {
+        font-size: 28px;
+    }
+    #hero-left > p {
+        font-size: 18px;
+    }
+    .btn-primary, .btn-video > div {
+        font-size: 13px;
+    }
+}
+
 #clients {
-    padding: 0 4rem;
     height: 69.69px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    padding: 16px 40px;
+    justify-content: center;
     align-items: center;
     background-color: #f5f7fa;
     overflow: hidden;
 }
+.clients-viewport {
+    width: calc(216px*6);
+    overflow: hidden;
+}
 .clients-logo-track {
     display: flex;
+    animation: slidePause 25s linear infinite;
+}
+
+.clients-logo-item {
+    flex: 0 0 auto;
+    width: 216px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clients-logo-item > img {
+    width: 116px;
+    height: 36px;
+}
+
+:root {
+  --step-width: 216px;               /* 한 칸(아이템)당 이동 거리 */
+  --move-time: 0.5s;                   /* 한 칸 부드럽게 이동하는 시간 */
+  --pause-time: 3s;                  /* 이동 후 쉬는 시간 */
+  --steps: 8;                        /* 반복할 단계 수 */
+  --total-time: calc((var(--move-time) + var(--pause-time)) * var(--steps));
+}
+
+.clients-logo-track {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slidePause var(--total-time) linear infinite;
+}
+
+@media (max-width: 1400px) {
+    .clients-viewport {
+        width: calc(186px*6);
+    }
+    .clients-logo-item {
+        width: 186px;
+    }
+    .clients-logo-item > img {
+        width: 86px;
+        height: 24.75px;
+    }
+    :root {
+        --step-width: 186px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clients-viewport {
+        width: calc(186px*5);
+    }
+    .clients-logo-item {
+        width: 186px;
+    }
+}
+@media (max-width: 992px) {
+    .clients-viewport {
+        width: calc(174px*4);
+    }
+    .clients-logo-item {
+        width: 174px;
+    }
+    .clients-logo-item > img {
+        width: 114px;
+        height: 35.25px;
+    }
+    :root {
+        --step-width: 174px;
+    }
+}
+@media (max-width: 768px) {
+    .clients-logo-item > img {
+        width: 69px;
+        height: 18.38px;
+    }
+}
+@media (max-width: 576px) {
+    .clients-viewport {
+        width: calc(174px*3);
+    }
+    .clients-logo-item {
+        width: 174px;
+    }
+    .clients-logo-item > img {
+        width: 134px;
+        height: 42px;
+    }
+    :root {
+        --step-width: 174px;
+    }
+}
+
+@keyframes slidePause {
+  /* 1단계 이동 끝 (0.3/26.4*100 ≒ 1.1364%) */
+  0%        { transform: translateX(0); }
+  1.1364%   { transform: translateX(calc(-1 * var(--step-width))); }
+  /* 1단계 정지 끝 (3.3/26.4*100 = 12.5%) */
+  12.5%     { transform: translateX(calc(-1 * var(--step-width))); }
+
+  /* 2단계 이동 끝 ( (3.3 + 0.3)/26.4*100 ≒ 13.6364% ) */
+  13.6364%  { transform: translateX(calc(-2 * var(--step-width))); }
+  /* 2단계 정지 끝 (6.6/26.4*100 = 25%) */
+  25%       { transform: translateX(calc(-2 * var(--step-width))); }
+
+  /* 3단계 이동 끝 ( (6.6 + 0.3)/26.4*100 ≒ 26.1364% ) */
+  26.1364%  { transform: translateX(calc(-3 * var(--step-width))); }
+  /* 3단계 정지 끝 (9.9/26.4*100 = 37.5%) */
+  37.5%     { transform: translateX(calc(-3 * var(--step-width))); }
+
+  /* 4단계 이동 끝 ( (9.9 + 0.3)/26.4*100 ≒ 38.6364% ) */
+  38.6364%  { transform: translateX(calc(-4 * var(--step-width))); }
+  /* 4단계 정지 끝 (13.2/26.4*100 = 50%) */
+  50%       { transform: translateX(calc(-4 * var(--step-width))); }
+
+  /* 5단계 이동 끝 ( (13.2 + 0.3)/26.4*100 ≒ 51.1364% ) */
+  51.1364%  { transform: translateX(calc(-5 * var(--step-width))); }
+  /* 5단계 정지 끝 (16.5/26.4*100 = 62.5%) */
+  62.5%     { transform: translateX(calc(-5 * var(--step-width))); }
+
+  /* 6단계 이동 끝 ( (16.5 + 0.3)/26.4*100 ≒ 63.6364% ) */
+  63.6364%  { transform: translateX(calc(-6 * var(--step-width))); }
+  /* 6단계 정지 끝 (19.8/26.4*100 = 75%) */
+  75%       { transform: translateX(calc(-6 * var(--step-width))); }
+
+  /* 7단계 이동 끝 ( (19.8 + 0.3)/26.4*100 ≒ 76.1364% ) */
+  76.1364%  { transform: translateX(calc(-7 * var(--step-width))); }
+  /* 7단계 정지 끝 (23.1/26.4*100 = 87.5%) */
+  87.5%     { transform: translateX(calc(-7 * var(--step-width))); }
+
+  /* 8단계 이동 끝 ( (23.1 + 0.3)/26.4*100 ≒ 88.6364% ) */
+  88.6364%  { transform: translateX(calc(-8 * var(--step-width))); }
+  /* 8단계 정지 끝 (26.4/26.4*100 = 100%) */
+  100%      { transform: translateX(calc(-8 * var(--step-width))); }
 }
 
 
