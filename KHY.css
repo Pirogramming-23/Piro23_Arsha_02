@@ -1,6 +1,6 @@
-/* ===================================================================
-   1. PROVIDED CSS VARIABLES
-====================================================================== */
+/* 1. PROVIDED CSS VARIABLES*/
+
+
 /* Fonts */
 @import url("./reset.css");
 
@@ -869,42 +869,31 @@ section h1, section h2, section h3, section h4, section h5, section h6 { color: 
     }
 }
 /*애니메이션*/
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.reveal {
-    animation-fill-mode: both;
-    animation-name: fade-in-up;
-    animation-timing-function: ease-out;
-    animation-timeline: view();
-    animation-range-start: entry 5%;
-    animation-range-end: entry 40%;
+/* 2. 공통 규칙  */
+.reveal{
+
+  view-timeline-name: --reveal;
+  view-timeline-axis: block;      
+
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+
+  animation-timeline: --reveal;    
+  animation-range: entry 5% cover 30%;  
+  opacity: 0;                       
 }
 
-.faq-list .reveal:nth-child(2) {
-    animation-delay: 0.1s;
-}
-.faq-list .reveal:nth-child(3) {
-    animation-delay: 0.2s;
-}
-.faq-list .reveal:nth-child(4) {
-    animation-delay: 0.3s;
-}
-.faq-list .reveal:nth-child(5) {
-    animation-delay: 0.4s;
-}
+/* 3. 카드별 범위만 덮어쓰기-범위 바꾸면 꺠져요 */
+.reveal-first  { animation-range: entry 5%  cover 25%; }
+.reveal-second { animation-range: entry 7%  cover 20%; }
+.reveal-third  { animation-range: entry 15% cover 35%; }
+.reveal-fourth { animation-range: entry 20% cover 40%; }
 
-#recent-blog-posts .row-khy .reveal:nth-child(2) {
-    animation-delay: 0.1s;
-}
-#recent-blog-posts .row-khy .reveal:nth-child(3) {
-    animation-delay: 0.2s;
-}
