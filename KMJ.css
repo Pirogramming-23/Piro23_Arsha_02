@@ -482,26 +482,47 @@ ul li {
   transform: translateY(0);
 } 
 
-/* 📌 카드 기본 상태: 흐리게, 축소된 상태 */
+/* 카드 기본 상태: 흐리게, 축소된 상태 */
 .card-kmj {
   opacity: 0.2;
   transform: scale(0.98);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* 📌 카드에 마우스를 올렸을 때: 선명하고 확대됨 */
+/*  카드에 마우스를 올렸을 때: 선명하고 확대됨 */
 .card-kmj:hover {
   opacity: 1;
   transform: scale(1);
   box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
 }
 
-/* ✅ 카드와 무관하게 #pricing 섹션 전체에 hover 효과는 제거 */
+@media (min-width: 992px) {
+  /* 카드 초기 상태 */
+  .card-kmj {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* #pricing 전체에 마우스를 올리면 모든 카드 등장 */
+  #pricing:hover .card-kmj {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  /* 개별 카드 hover 효과 제거 */
+  .card-kmj:hover {
+    box-shadow: none;
+  }
+}
+
+/*  카드와 무관하게 #pricing 섹션 전체에 hover 효과는 제거 */
 #pricing:hover {
   /* 카드에는 영향 안 줌 */
 }
 
-/* 🔡 제목, 부제목: 기본 상태는 숨김 */
+/* 제목, 부제목: 기본 상태는 숨김 */
 .section-title,
 .section-subtitle {
   opacity: 0;
@@ -509,14 +530,14 @@ ul li {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* ⬆️ #pricing 섹션에 마우스를 올리면 제목 등장 */
+/* #pricing 섹션에 마우스를 올리면 제목 등장 */
 #pricing:hover .section-title,
 #pricing:hover .section-subtitle {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* 🧾 Testimonials도 동일하게 적용 */
+/* Testimonials도 동일하게 적용 */
 #testimonials-kmj .section-title,
 #testimonials-kmj .section-subtitle {
   opacity: 0;
