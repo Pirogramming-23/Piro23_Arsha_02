@@ -25,24 +25,26 @@ header {
 
 #changes {
     height: 100%;
+    width: 300px;
     display: flex;
-    padding: 0 0 0 20px;
+    padding: 3px 0 0 20px;
 }
 
 #changes > a {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 25px;
+    padding-right: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#changes > a > svg {
+.changes-tablet > svg, .changes-phone > svg {
     width: 22px;
     height: 22px;
     color: rgb(135, 162, 192);
 }
-#changes.changes-monitor > svg {
+.changes-monitor > svg {
     color: white;
 }
 #changes > a > svg:hover {
@@ -160,16 +162,30 @@ header {
     font: 15px var(--nav-font);
     color: white;
 }
+#dropdown {
+    color: white;
+}
+#dropdown > span, #dropdown > svg{
+    color: inherit
+}
+.header-menu > span:hover, #dropdown:hover {
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
 .header-menu > svg {
     color: white;
     width: 20px;
     height: 20px;
     padding: 8px 0 0 0;
 }
+
 .header-menu-after > svg {
     color: white;
     width: 40px;
     height: 40px;
+}
+.header-home > span {
+    color: var(--accent-color);
 }
 .header-started {
     display: flex;
@@ -185,6 +201,10 @@ header {
     font: 14px var(--default-font);
     background-color: var(--accent-color);
     color: white;
+}
+.header-started > div:hover {
+    filter: brightness(0.93);
+    transition: all 0.2s ease;
 }
 
 @media (max-width: 1200px) {
@@ -304,22 +324,31 @@ header {
     font-size: 15px;
     border-radius: 50px;
 }
+.btn-primary:hover {
+    filter: brightness(0.93);
+    transition: all 0.2s ease;
+}
 .btn-video {
     margin: 0 0 0 2rem;
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .btn-video > svg {
     width: 40px;
     height: 40px;
-    color: white;
+    color: inherit;
     padding: 0 8px 0 0;
 }
 .btn-video > div {
     font: 16px var(--default-font);
-    color: white;
+    color: inherit;
     font-weight: 700;
+}
+.btn-video:hover {
+    color: var(--accent-color);
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 992px) {
@@ -392,6 +421,10 @@ header {
 .clients-logo-item > img {
     width: 116px;
     height: 36px;
+    transition: transform 0.2s ease;
+}
+.clients-logo-item > img:hover {
+    transform: scale(1.1);
 }
 
 :root {
