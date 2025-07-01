@@ -1,0 +1,552 @@
+#pricing {
+  padding: 4rem 3rem;
+  background-color: #f5f7fa;
+  text-align: center;
+
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  padding: 2rem 1rem;
+}
+
+.card-kmj {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 540px;
+  width: 380px;
+  transition: transform 0.3s;
+  font-family: var(--heading-font);
+  height: auto;  
+  overflow: visible; 
+}
+
+.card-content-kmj {
+  width: 100%;
+  text-align: left;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .pricing-table {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-kmj {
+    width: 320px;
+    height: 604px;
+  }
+}
+
+@media (max-width: 992px) {
+  .pricing-container {
+    margin: 0;
+    padding: 0;
+  }
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-kmj {
+    width: 720px;
+    height: 540px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-kmj {
+    width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-table {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-kmj {
+    width: 540px;
+    height: 600px;
+  }
+}
+
+.card-kmj h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #37517e;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-size: 3rem;
+  color: #47b2e4;
+  padding-top: 2rem;
+}
+
+.price span {
+  font-size: 1rem;
+  color: gray;
+}
+
+.price .dollar {
+  font-size: 2rem;
+  vertical-align: top;
+  margin-right: 0.2rem;
+  color: #47b2e4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  color: #444444;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.check {
+  color: green;
+  margin-right: 0.5rem;
+}
+
+.x {
+  color: gray;
+  margin-right: 0.5rem;
+}
+
+.delete {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.check-sub {
+  color: gray;
+}
+
+.button-kmj {
+  padding: 0.6rem 1.9rem;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #47b2e4;
+  color: #47b2e4 !important;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-kmj span {
+  color: #47b2e4;
+}
+
+.card-kmj.middle .button-kmj {
+  background-color: #47b2e4;
+  color: white !important;
+}
+
+.button-kmj:hover {
+  opacity: 0.8;
+  background-color: #47b2e4;
+  color: white !important;
+}
+
+.card-kmj.middle {
+  border-top: 4px solid #47b2e4;
+}
+
+.testimonials-kmj-container .pricing-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 2rem;
+  color: #37517e;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.section-underline {
+  width: 50px;
+  height: 2.5px;
+  background: #00b4e0;
+  margin: 0.5rem auto 1.5rem;
+  position: relative;
+  color: gray;
+}
+
+.section-underline::before,
+.section-underline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: #ccc;
+}
+
+.section-underline::before {
+  left: -45px;
+  transform: translateY(-50%);
+}
+
+.section-underline::after {
+  right: -45px;
+  transform: translateY(-50%);
+}
+
+#testimonials-kmj {
+  position: relative;
+  height: 600px;
+  background: white;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.testimonials-kmj-header .pricing-header {
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.pricing-header {
+  padding-bottom: 3rem;
+}
+
+.testimonials-kmj-header {
+  padding-bottom: 3rem;
+}
+
+.testimonial-kmj-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #fbc02d;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.role {
+  color: gray;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--heading-font);
+}
+
+.quote {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-style: italic;
+  color: #444444;
+  line-height: 1;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+.quote-icon {
+  color: #87ceeb;
+  font-size: 1.5rem;
+}
+
+.testimonials-kmj-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+
+.header-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  z-index: 2;
+  background: white;
+  border: 4px solid white;
+}
+
+.dots-kmj {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.dot-kmj {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.section-subtitle {
+  color: #444444;
+}
+
+.testimonial-kmj h3 {
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #37517e;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-kmj {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fade 15s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  pointer-events: none;
+}
+
+.dot-kmj.d1-kmj { animation: d1Cycle 15s infinite; }
+.dot-kmj.d2-kmj { animation: d2Cycle 15s infinite; }
+.dot-kmj.d3-kmj { animation: d3Cycle 15s infinite; }
+.dot-kmj.d4-kmj { animation: d4Cycle 15s infinite; }
+.dot-kmj.d5-kmj { animation: d5Cycle 15s infinite; }
+
+@keyframes d1Cycle {
+  0%, 19.99% { background-color: #39b6e9; }
+  20%, 100%  { background-color: #ddd; }
+}
+@keyframes d2Cycle {
+  0%, 19.99%, 40%, 100% { background-color: #ddd; }
+  20%, 39.99% { background-color: #39b6e9; }
+}
+@keyframes d3Cycle {
+  0%, 39.99%, 60%, 100% { background-color: #ddd; }
+  40%, 59.99% { background-color: #39b6e9; }
+}
+@keyframes d4Cycle {
+  0%, 59.99%, 80%, 100% { background-color: #ddd; }
+  60%, 79.99% { background-color: #39b6e9; }
+}
+@keyframes d5Cycle {
+  0%, 79.99% { background-color: #ddd; }
+  80%, 100% { background-color: #39b6e9; }
+}
+
+@keyframes fade1 {
+  0%, 19.99% { opacity: 1; visibility: visible; z-index: 1; }
+  20%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade2 {
+  0%, 19.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  20%, 39.99% { opacity: 1; visibility: visible; z-index: 1; }
+  40%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade3 {
+  0%, 39.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  40%, 59.99% { opacity: 1; visibility: visible; z-index: 1; }
+  60%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade4 {
+  0%, 59.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  60%, 79.99% { opacity: 1; visibility: visible; z-index: 1; }
+  80%, 100%  { opacity: 0; visibility: hidden; z-index: 0; }
+}
+@keyframes fade5 {
+  0%, 79.99% { opacity: 0; visibility: hidden; z-index: 0; }
+  80%, 100%  { opacity: 1; visibility: visible; z-index: 1; }
+}
+
+.t1-kmj { animation: fade1 15s infinite; }
+.t2-kmj { animation: fade2 15s infinite; }
+.t3-kmj { animation: fade3 15s infinite; }
+.t4-kmj { animation: fade4 15s infinite; }
+.t5-kmj { animation: fade5 15s infinite; }
+
+.slider-kmj {
+  display: flex;
+  width: 500%;
+  animation: autoSlide 25s infinite;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-kmj .testimonial-kmj {
+  width: 100vw;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInlater {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-kmj {
+  opacity: 0.2;  /* 흐리게 시작 */
+  transform: scale(0.98);  /* 약간 축소 */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: auto; /* 마우스 반응 가능 */
+}
+
+.card-kmj:hover {
+  opacity: 1;  /* 선명하게 */
+  transform: scale(1);  /* 확대되며 강조 */
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* 섹션 전체에 마우스를 올렸을 때 모든 카드 등장 */
+#pricing:hover{
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* 제목, 부제목: 초기 상태 */
+.section-title,
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 섹션 전체에 마우스를 올렸을 때 텍스트 등장 */
+#pricing:hover .section-title,
+#pricing:hover .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* testimonials 제목, 부제목: 초기 상태 */
+#testimonials-kmj .section-title,
+#testimonials-kmj .section-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* testimonials 섹션에 마우스를 올렸을 때 등장 */
+#testimonials-kmj:hover .section-title,
+#testimonials-kmj:hover .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+/* 카드 기본 상태: 흐리게, 축소된 상태 */
+.card-kmj {
+  opacity: 0.2;
+  transform: scale(0.98);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/*  카드에 마우스를 올렸을 때: 선명하고 확대됨 */
+.card-kmj:hover {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 992px) {
+  /* 카드 초기 상태 */
+  .card-kmj {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  /* #pricing 전체에 마우스를 올리면 모든 카드 등장 */
+  #pricing:hover .card-kmj {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+  }
+
+  /* 개별 카드 hover 효과 제거 */
+  .card-kmj:hover {
+    box-shadow: none;
+  }
+}
+
+/*  카드와 무관하게 #pricing 섹션 전체에 hover 효과는 제거 */
+#pricing:hover {
+  /* 카드에는 영향 안 줌 */
+}
+
+/* 제목, 부제목: 기본 상태는 숨김 */
+.section-title,
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* #pricing 섹션에 마우스를 올리면 제목 등장 */
+#pricing:hover .section-title,
+#pricing:hover .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonials도 동일하게 적용 */
+#testimonials-kmj .section-title,
+#testimonials-kmj .section-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#testimonials-kmj:hover .section-title,
+#testimonials-kmj:hover .section-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
